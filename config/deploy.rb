@@ -36,14 +36,14 @@ set :repo_url, "git@github.com:wfarel/avicola-app.git"
 # set :keep_releases, 5
 
 # Uncomment the following to require manually verifying the host key before first deploy.
-# set :ssh_options, verify_host_key: :secure
+ set :ssh_options, verify_host_key: :secure
 
 set :scm, :git
 set :branch, "master"
 set :deploy_via, :copy
 set :user, 'deploy'
 
-set :ssh_options, { forward_agent: true, paranoid: true, keys: "~/.ssh/id_rsa" }
+#set :ssh_options, { forward_agent: true, paranoid: true, keys: "~/.ssh/id_rsa" }
 
 # config/deploy.rb
 set :rbenv_type, :user # or :system, or :fullstaq (for Fullstaq Ruby), depends on your rbenv setup
