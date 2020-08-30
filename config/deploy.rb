@@ -43,6 +43,8 @@ set :branch, "master"
 set :deploy_via, :copy
 set :user, 'deploy'
 
+set :ssh_options, { forward_agent: true, paranoid: true, keys: "~/.ssh/id_rsa" }
+
 # config/deploy.rb
 set :rbenv_type, :user # or :system, or :fullstaq (for Fullstaq Ruby), depends on your rbenv setup
 set :rbenv_ruby, '2.6.6'

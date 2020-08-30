@@ -6,6 +6,9 @@ role :db,  %w{deploy@192.168.80.107}
 server '192.168.80.107', user: 'deploy', roles: %w{web app}, my_property: :my_value
 set :stage, :production
 
+set :ssh_options, {
+keys: %w(~/.ssh/id_rsa),
+forward_agent: false, }
 
 # server-based syntax
 # ======================
