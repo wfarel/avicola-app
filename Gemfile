@@ -52,12 +52,13 @@ group :development do
 end
 
 group :development do
-  gem 'capistrano'
+  gem 'capistrano', '~> 3.9'
+  gem 'capistrano-rbenv', '~> 2.2'
   gem 'capistrano-bundler'
-  gem 'capistrano-rails'
-  gem 'capistrano-rbenv'
+  #gem 'capistrano-rails'
   gem 'capistrano3-puma'
-  gem 'capistrano-ssh-doctor'
+  #gem 'capistrano-ssh-doctor'
+  gem 'capistrano-ssh-doctor', git: 'https://github.com/capistrano-plugins/capistrano-ssh-doctor.git'
 
 end
 
