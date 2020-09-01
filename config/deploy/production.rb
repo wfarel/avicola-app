@@ -3,12 +3,12 @@ role :app, %w{deploy@192.168.80.106}
 role :web, %w{deploy@192.168.80.106}
 role :db,  %w{deploy@192.168.80.106}
 
-server '192.168.80.106', user: 'deploy', roles: %w{web app}, my_property: :my_value
+server '192.168.80.106', user: 'deploy', roles: %w{web app}#, my_property: :my_value
 set :stage, :production
 
-set :ssh_options, {
-keys: %w(~/.ssh/id_rsa),
-forward_agent: false, }
+#set :ssh_options, {
+#keys: %w(~/.ssh/id_rsa),
+#forward_agent: false, }
 
 # server-based syntax
 # ======================
@@ -53,11 +53,11 @@ forward_agent: false, }
 #
 # Global options
 # --------------
-  set :ssh_options, {
-    keys: %w(/home/user_name/.ssh/id_rsa),
-    forward_agent: false,
-    auth_methods: %w(password)
-  }
+#  set :ssh_options, {
+#    keys: %w(/home/user_name/.ssh/id_rsa),
+#    forward_agent: false,
+#    auth_methods: %w(password)
+#  }
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
